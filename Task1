@@ -1,0 +1,74 @@
+# Q1 - Menu Function
+
+def menu(item):
+    item = item.lower()
+
+    if item == "karhai":
+        return "Karhai is cooking"
+    elif item == "biryani":
+        return "Biryani is ready"
+    elif item == "bbq":
+        return "BBQ is grilled"
+    elif item == "chai":
+        return "Chai is served"
+    else:
+        return "Item not available ❌"
+
+
+# Q3 - Karhai Spice System
+
+def karhai(spice_level):
+    spice_level = spice_level.lower()
+
+    if spice_level == "high":
+        return "Very Spicy Karhai"
+    elif spice_level == "medium":
+        return "Normal Karhai"
+    elif spice_level == "low":
+        return "Mild Karhai"
+    else:
+        return "Invalid input"
+
+
+# Q4 - BBQ Platter System
+
+def bbq(pieces):
+    if pieces >= 10:
+        return "Full BBQ Platter"
+    elif pieces >= 5:
+        return "Half BBQ Platter"
+    else:
+        return "Small BBQ Plate"
+
+
+# Q5 - Chai System
+
+def chai(sugar):
+    if sugar == 0:
+        return "No Sugar Chai"
+    elif sugar == 1:
+        return "Normal Chai"
+    else:
+        return "Sweet Chai"
+
+
+# FINAL TASK - Desi Restaurant Management System
+
+for customer in range(1, 6):
+    print(f"\nCustomer {customer}")
+
+    item = input("Enter item (karhai/biryani/bbq/chai): ").lower()
+
+    print(menu(item))
+
+    if item == "karhai":
+        spice = input("Enter spice level (high/medium/low): ")
+        print(karhai(spice))
+
+    elif item == "bbq":
+        pieces = int(input("Enter number of BBQ pieces: "))
+        print(bbq(pieces))
+
+    elif item == "chai":
+        sugar = int(input("Enter sugar level: "))
+        print(chai(sugar))
